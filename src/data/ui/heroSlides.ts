@@ -1,11 +1,11 @@
 export interface HeroSlide {
     id: string;
     type: "image" | "video";
-    image: string; // for "image": the photo shown. For "video": the poster/fallback.
+    image: string;
     video?: string;
     eyebrowKey: string;
     titleKey: string;
-    accentKey: string; // must be an exact substring of the resolved titleKey text
+    accentKey: string;
     sublineKey: string;
 }
 
@@ -14,7 +14,7 @@ export const heroSlides: HeroSlide[] = [
     {
         id: "hero-1",
         type: "image",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1740&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
         eyebrowKey: "hero.slide1.eyebrow",
         titleKey: "hero.slide1.title",
         accentKey: "hero.slide1.accent",
@@ -23,7 +23,7 @@ export const heroSlides: HeroSlide[] = [
     {
         id: "hero-2",
         type: "image",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1740&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
         eyebrowKey: "hero.slide2.eyebrow",
         titleKey: "hero.slide2.title",
         accentKey: "hero.slide2.accent",
@@ -32,7 +32,7 @@ export const heroSlides: HeroSlide[] = [
     {
         id: "hero-3",
         type: "image",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1740&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
         eyebrowKey: "hero.slide3.eyebrow",
         titleKey: "hero.slide3.title",
         accentKey: "hero.slide3.accent",
@@ -41,7 +41,7 @@ export const heroSlides: HeroSlide[] = [
     {
         id: "hero-4",
         type: "image",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1740&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
         eyebrowKey: "hero.slide4.eyebrow",
         titleKey: "hero.slide4.title",
         accentKey: "hero.slide4.accent",
@@ -50,7 +50,7 @@ export const heroSlides: HeroSlide[] = [
     {
         id: "hero-5",
         type: "image",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1740&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
         eyebrowKey: "hero.slide5.eyebrow",
         titleKey: "hero.slide5.title",
         accentKey: "hero.slide5.accent",

@@ -11,7 +11,7 @@ export const rooms: Room[] = [
         pricePerNight: 20000,
         capacity: 2,
         size: "18 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "comfort",
@@ -23,7 +23,7 @@ export const rooms: Room[] = [
         pricePerNight: 28000,
         capacity: 2,
         size: "22 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "superior-garden",
@@ -35,7 +35,7 @@ export const rooms: Room[] = [
         pricePerNight: 35000,
         capacity: 2,
         size: "26 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "terrace-room",
@@ -47,7 +47,7 @@ export const rooms: Room[] = [
         pricePerNight: 42000,
         capacity: 2,
         size: "26 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "family-suite",
@@ -59,7 +59,7 @@ export const rooms: Room[] = [
         pricePerNight: 55000,
         capacity: 4,
         size: "38 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "junior-suite",
@@ -71,7 +71,7 @@ export const rooms: Room[] = [
         pricePerNight: 68000,
         capacity: 3,
         size: "32 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "honeymoon-suite",
@@ -83,7 +83,7 @@ export const rooms: Room[] = [
         pricePerNight: 85000,
         capacity: 2,
         size: "35 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
     {
         id: "presidential-suite",
@@ -95,6 +95,6 @@ export const rooms: Room[] = [
         pricePerNight: 150000,
         capacity: 4,
         size: "60 m²",
-        image: "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80",
+        image: "/images/photo-1725962441765-6aaa75327f3b.jpg",
     },
 ];

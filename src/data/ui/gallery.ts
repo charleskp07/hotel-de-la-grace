@@ -9,20 +9,20 @@ export interface GalleryItem {
 
 
 const PHOTOS = [
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
-    "https://images.unsplash.com/photo-1725962441765-6aaa75327f3b?auto=format&fit=crop&w=1200&q=80", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
+    "/images/photo-1725962441765-6aaa75327f3b.jpg", 
 ];
 
 const VIDEOS = [
