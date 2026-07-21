@@ -1,0 +1,68 @@
+@use "../../../styles/variables"as *;
+@use "../../../styles/mixins"as *;
+
+.iconRow {
+    @include flex(flex-start, center, 12px);
+    flex-wrap: wrap;
+}
+
+.iconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: $color-text-on-dark;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background: $color-secondary;
+        color: $color-bg-deep;
+    }
+}
+
+
+.floatingButton {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 200;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: $color-whatsapp;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 14px 36px rgba(37, 211, 102, 0.55);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid rgba(37, 211, 102, 0.5);
+        animation: ping 2.4s ease-out infinite;
+    }
+}
+
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

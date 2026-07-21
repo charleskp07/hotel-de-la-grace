@@ -1,0 +1,301 @@
+@use "../../../styles/variables"as *;
+@use "../../../styles/mixins"as *;
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: $color-bg-deep;
+}
+
+.bgLayer {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.bgPhoto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 20, 12, 0.42);
+    z-index: 1;
+}
+
+.bottomFade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), transparent);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.shapeRing {
+    position: absolute;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    z-index: 2;
+    pointer-events: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 55px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 120px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.shapeDot {
+    position: absolute;
+    right: 14%;
+    top: 24%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201, 162, 39, 0.28) 0%, transparent 70%);
+    z-index: 2;
+    pointer-events: none;
+    animation: pulse 6s ease-in-out infinite;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.35;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 120px 0 130px;
+}
+
+.container {
+    @include container;
+}
+
+.textBlock {
+    max-width: 600px;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 18px;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.pulseDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $color-secondary;
+    animation: blink 2.4s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.headline {
+    font-family: $font-heading;
+    font-size: clamp(28px, 3.8vw, 44px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: $color-white;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.accent {
+    font-style: italic;
+    color: #f0cd8a;
+}
+
+.subline {
+    font-size: clamp(14.5px, 1.4vw, 16.5px);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.65;
+    max-width: 460px;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 30px;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+    @include button-base;
+}
+
+.ctaPrimary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+        background: $color-primary-dark;
+    }
+}
+
+.ctaSecondary {
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    color: $color-white;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+.trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 13px;
+    font-weight: 500;
+
+    svg {
+        color: $color-secondary;
+        flex-shrink: 0;
+    }
+}
+
+.controls {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.24);
+        transform: scale(1.06);
+    }
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pill {
+    position: relative;
+    height: 4px;
+    width: 26px;
+    border-radius: $radius-full;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s $ease-smooth;
+
+    &.active {
+        width: 46px;
+    }
+}
+
+.pillFill {
+    position: absolute;
+    inset: 0;
+    background: $color-secondary;
+    transform-origin: left;
+    display: block;
+    border-radius: $radius-full;
+}

@@ -1,0 +1,100 @@
+@use "../../../styles/variables"as *;
+@use "../../../styles/mixins"as *;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 26px;
+    @include divider;
+}
+
+.imageWrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-md;
+    height: 190px;
+    margin-bottom: 18px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s $ease-smooth;
+
+    .card:hover & {
+        transform: scale(1.04);
+    }
+}
+
+.price {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(43, 36, 29, 0.85);
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: $radius-sm;
+}
+
+.perNight {
+    font-weight: 400;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 3px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    h3 {
+        font-size: 17px;
+        margin-bottom: 6px;
+    }
+
+    p {
+        color: $color-text-muted;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0 0 14px;
+        flex: 1;
+    }
+}
+
+.meta {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 14px;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: $color-text-muted;
+
+        svg {
+            color: $color-primary;
+        }
+    }
+}
+
+.learnMore {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

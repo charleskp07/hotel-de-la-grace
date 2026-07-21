@@ -1,0 +1,66 @@
+@use "variables"as *;
+
+@mixin container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@mixin flex($justify: flex-start, $align: center, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin mobile {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+
+@mixin button-base {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: $radius-sm;
+    font-weight: 600;
+    font-size: 14.5px;
+    font-family: $font-body;
+    cursor: pointer;
+    border: none;
+    min-height: 34px;
+    transition: background-color 0.2s $ease-smooth, color 0.2s $ease-smooth, border-color 0.2s $ease-smooth;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@mixin section-title {
+    font-family: $font-heading;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+@mixin eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: $color-primary;
+}
+
+@mixin divider {
+    border-bottom: 1px solid $color-border;
+}

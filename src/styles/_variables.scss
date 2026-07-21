@@ -1,0 +1,45 @@
+
+
+$color-primary: #b5542c; // terracotta - couleur de marque principale
+$color-primary-dark: #8c3f1e;
+$color-primary-light: #d17a4e;
+$color-accent: #3c6e64; // teal sourd - accent secondaire (végétation, fraîcheur)
+$color-accent-dark: #2a5049;
+$color-secondary: #c9a227; // touche dorée, réservée aux petits accents
+
+$color-bg: #ffffff;
+$color-bg-alt: #f7f1e8; // sable très clair
+$color-bg-deep: #2b241d; // brun profond (footer, sections contrastées)
+
+$color-text: #2b241d;
+$color-text-muted: #6b5f52;
+$color-text-on-dark: rgba(255, 255, 255, 0.88);
+$color-text-on-dark-muted: rgba(255, 255, 255, 0.62);
+
+$color-white: #ffffff;
+$color-whatsapp: #25d366;
+
+$color-border: #e6dcc9;
+
+$font-heading: "Fraunces",
+"Georgia",
+serif;
+$font-body: "Inter",
+"Segoe UI",
+sans-serif;
+
+$radius-sm: 8px;
+$radius-md: 14px;
+$radius-lg: 22px;
+$radius-full: 999px;
+
+$ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+
+$container-max-width: 1160px;
+
+$header-height: 68px;
+$header-height-mobile: 58px;

@@ -1,0 +1,87 @@
+@use "../../../styles/variables"as *;
+@use "../../../styles/mixins"as *;
+
+.footer {
+    background-color: $color-bg-deep;
+    color: $color-text-on-dark;
+    padding: 64px 0 24px;
+}
+
+.inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        text-align: center;
+    }
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include tablet {
+        align-items: center;
+    }
+}
+
+.logoImg {
+    height: 80px;
+    max-width: 80px;
+    display: block;
+}
+
+.name {
+    font-family: $font-heading;
+    font-weight: 600;
+    font-size: 20px;
+    color: $color-white;
+    margin: 0;
+}
+
+.address {
+    color: $color-text-on-dark-muted;
+    margin: 0;
+    font-size: 14px;
+}
+
+.navTitle {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: $color-text-on-dark-muted;
+    margin: 0 0 6px;
+}
+
+.nav,
+.legal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    a {
+        color: $color-text-on-dark;
+        text-decoration: none;
+        font-size: 14px;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+}
+
+.copy {
+    text-align: center;
+    color: $color-text-on-dark-muted;
+    font-size: 12px;
+    margin: 48px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

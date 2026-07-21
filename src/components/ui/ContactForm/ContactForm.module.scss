@@ -1,0 +1,84 @@
+@use "../../../styles/variables"as *;
+@use "../../../styles/mixins"as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 10px 12px;
+        border: 1px solid $color-border;
+        border-radius: $radius-sm;
+        font-family: $font-body;
+        font-size: 15px;
+        background: $color-white;
+        color: $color-text;
+
+        &:focus {
+            outline: 2px solid $color-primary-light;
+        }
+    }
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: $color-text-muted;
+
+    a {
+        color: $color-primary;
+    }
+}
+
+.submit {
+    @include button-base;
+    background-color: $color-primary;
+    color: $color-white;
+    align-self: flex-start;
+    width: 100%;
+
+    &:hover {
+        background-color: $color-primary-dark;
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.success {
+    color: #1a8c3f;
+    font-weight: 600;
+}
+
+.error {
+    color: #c62828;
+    font-weight: 600;
+}
